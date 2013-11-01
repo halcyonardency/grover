@@ -1,6 +1,5 @@
 class vim {
-   package {
-      "vim-enhanced":
-         ensure => "present"
+   package { "vim-enhanced":
+      ensure => "present"
    }
 }

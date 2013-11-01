@@ -1,6 +1,5 @@
 class git {
-   package {
-      "git":
-         ensure => present
+   package { "git":
+      ensure => present,
    }
 }

@@ -14,11 +14,11 @@ class denyhosts (
   }
 
   service {
-    "denyhosts.service":
+    "denyhosts":
       ensure    => running,
       enable    => true,
-      hasstatus => false,
-      pattern   => "denyhosts",
+      hasstatus => true,
+      hasrestart=> true,
       require   => Package["denyhosts"],
       provider  => "systemd"
   }
