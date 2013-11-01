@@ -1,6 +1,6 @@
 class denyhosts (
   $adminemail = "root@localhost",
-  $allow      = [ 'localhost' ]
+  $allow      = [ '', ]
   ) {
 
   package { "denyhosts": ensure => installed; }
