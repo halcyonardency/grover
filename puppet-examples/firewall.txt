@@ -1,0 +1,18 @@
+create a subclass, firewall:
+
+class apache::firewall {
+  firewall { '100 allow http and https access':
+    port   => [80, 443],
+    proto  => tcp,
+    action => accept,
+  }
+}
+
+then in the parent apache class enable the firewall module.
+
+class apache {
+   class { 'apache::firewall': }
+   # ...  then the rest of the module ...
+}
+
+it might make more sense to have firewall::enable and firewall::disable classes, but, this is up to you.
