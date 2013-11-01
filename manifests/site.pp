@@ -8,6 +8,7 @@ node default {
    class { 'denyhosts': }
    class { 'git': }
    class { 'apache': }
+   class { 'apache::passenger': }
    resources { "firewall":
       purge => true
    }
