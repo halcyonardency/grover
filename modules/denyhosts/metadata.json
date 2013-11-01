@@ -1,0 +1,23 @@
+{
+  "author": "Puppet Labs",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-denyhosts",
+  "checksums": {
+    "LICENSE": "8859ac3cfa5f6f85786625624a8c8a6a",
+    "templates/denyhosts.conf.erb": "e51fdc892736420eb425c93a0f857528",
+    "manifests/init.pp": "7e4953b37d61096c84c59256fe5a3898",
+    "README.markdown": "ed18324a320ca06bb4feb3b11c2246e8",
+    "Modulefile": "9f750312de4de7ffa24f50195d6a226c"
+  },
+  "dependencies": [
+
+  ],
+  "source": "https://github.com/puppetlabs/puppetlabs-denyhosts",
+  "summary": "Configure DenyHosts",
+  "description": "Configure DenyHosts",
+  "license": "Apache License, Version 2.0",
+  "version": "0.0.1",
+  "name": "puppetlabs-denyhosts",
+  "types": [
+
+  ]
+}
