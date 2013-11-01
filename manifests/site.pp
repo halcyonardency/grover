@@ -1,4 +1,4 @@
-Package { provider => "rpm" }
+Package { provider => "yum" }
 Service { provider => systemd }
 
 node default {
