@@ -9,6 +9,7 @@ node default {
    class { 'git': }
    class { 'apache': }
    class { 'apache::passenger': }
+   class { 'sinatra': }
    resources { "firewall":
       purge => true
    }
