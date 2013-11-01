@@ -6,4 +6,9 @@ node default {
    include screen
    #include denyhosts
    include git
+#   class { 'sensu':
+#     rabbitmq_password  => 'secret',
+#     rabbitmq_host      => 'sensu-server.foo.com',
+#     subscriptions      => 'sensu-test',
+#   }
 }
