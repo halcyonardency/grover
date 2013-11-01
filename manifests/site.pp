@@ -7,6 +7,7 @@ node default {
    class { 'screen': }
    class { 'denyhosts': }
    class { 'git': }
+   class { 'apache': }
    resources { "firewall":
       purge => true
    }
