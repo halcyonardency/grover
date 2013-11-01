@@ -10,7 +10,7 @@ class denyhosts (
     group   => root,
     mode    => 644,
     content => template("denyhosts/denyhosts.conf.erb"),
-    notify  => Service["denyhosts.service"],
+    notify  => Service["denyhosts"],
   }
 
   service {

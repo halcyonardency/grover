@@ -2,10 +2,10 @@ Package { provider => "yum" }
 Service { provider => systemd }
 
 node default {
-   include vim
-   include screen
-   include denyhosts
-   include git
+   class { 'vim': }
+   class { 'screen': }
+   class { 'denyhosts': }
+   class { 'git': }
    resources { "firewall":
       purge => true
    }
