@@ -194,10 +194,10 @@ HOSTNAME_LOOKUP=YES
 # running at a time.
 #
 # Redhat/Fedora:
-#LOCK_FILE = /var/lock/subsys/denyhosts
+LOCK_FILE = /var/lock/subsys/denyhosts
 #
 # Debian
-LOCK_FILE = /var/run/denyhosts.pid
+#LOCK_FILE = /var/run/denyhosts.pid
 #
 # Misc
 #LOCK_FILE = /tmp/denyhosts.lock
@@ -249,7 +249,7 @@ SMTP_PORT = 25
 # SMTP_FROM: you can specify the "From:" address in messages sent
 # from DenyHosts when it reports thwarted abuse attempts
 #
-SMTP_FROM = DenyHosts <nobody@localhost.localdomain>
+SMTP_FROM = DenyHosts <nobody@localhost>
 #
 #######################################################################
 
@@ -257,7 +257,7 @@ SMTP_FROM = DenyHosts <nobody@localhost.localdomain>
 #
 # SMTP_SUBJECT: you can specify the "Subject:" of messages sent
 # by DenyHosts when it reports thwarted abuse attempts
-SMTP_SUBJECT = DenyHosts Report
+SMTP_SUBJECT = DenyHosts Report from $[HOSTNAME]
 #
 ######################################################################
 
@@ -388,7 +388,7 @@ AGE_RESET_INVALID=10d
 # PLUGIN_DENY: If set, this value should point to an executable
 # program that will be invoked when a host is added to the
 # HOSTS_DENY file.  This executable will be passed the host
-# that will be added as its only argument.
+# that will be added as it's only argument.
 #
 #PLUGIN_DENY=/usr/bin/true
 #
@@ -400,7 +400,7 @@ AGE_RESET_INVALID=10d
 # PLUGIN_PURGE: If set, this value should point to an executable
 # program that will be invoked when a host is removed from the
 # HOSTS_DENY file.  This executable will be passed the host
-# that is to be purged as its only argument.
+# that is to be purged as it's only argument.
 #
 #PLUGIN_PURGE=/usr/bin/true
 #
@@ -431,7 +431,7 @@ AGE_RESET_INVALID=10d
 #######################################################################
 #
 # DAEMON_LOG: when DenyHosts is run in daemon mode (--daemon flag)
-# this is the logfile that DenyHosts uses to report its status.
+# this is the logfile that DenyHosts uses to report it's status.
 # To disable logging, leave blank.  (default is: /var/log/denyhosts)
 #
 DAEMON_LOG = /var/log/denyhosts
@@ -597,7 +597,7 @@ SYNC_UPLOAD = no
 # to this resiliency period or greater.
 #
 # Resiliency is defined as the timespan between a hackers first known 
-# attack and its most recent attack.  Example:
+# attack and it's most recent attack.  Example:
 # 
 # If the centralized   denyhosts.net server records an attack at 2 PM 
 # and then again at 5 PM, specifying a SYNC_DOWNLOAD_RESILIENCY = 4h 
