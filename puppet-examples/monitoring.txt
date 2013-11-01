@@ -1,0 +1,19 @@
+To add monitoring in line with configuration management state, create a check for the service (if one does not exist):
+
+class apache::monitoring::sensu {
+  sensu::check { 'apache-running':
+    handlers    => 'default',
+    command     => '/etc/sensu/plugins/check-procs.rb -p /usr/sbin/httpd -w 100 -c 200 -C 1',
+    standalone  => true,
+    custom      => {
+      refresh     => 900,
+      occurrences => 2,
+    },
+  }
+}
+
+Then, add subscription info:
+
+class apache::monitoring::sensu::enable {
+  sensu::subscription { 'apache': }
+}
