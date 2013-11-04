@@ -10,7 +10,8 @@ node default {
    class { 'apache': }
    class { 'apache::passenger': }
    class { 'sinatra': }
-   #class { 'collectd': }
+   class { 'collectd': }
+   class { 'jwhois': }
    #class { 'collectd::apache': }
    resources { "firewall":
       purge => true
