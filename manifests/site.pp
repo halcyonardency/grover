@@ -12,6 +12,7 @@ node default {
    class { 'sinatra': }
    class { 'collectd': }
    class { 'collectd::plugin::apache': }
+   class { 'collectd::plugin::web': }
    class { 'jwhois': }
    #class { 'collectd::apache': }
    resources { "firewall":
