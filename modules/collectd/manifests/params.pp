@@ -4,6 +4,8 @@
 #
 class collectd::params {
 
+  $plugin_conf_dir   = "/etc/collectd.d/"
+
   $package_name = $::osfamily ? {
     default => 'collectd',
   }

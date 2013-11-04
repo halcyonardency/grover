@@ -11,6 +11,7 @@ node default {
    class { 'apache::passenger': }
    class { 'sinatra': }
    class { 'collectd': }
+   class { 'collectd::plugin::apache': }
    class { 'jwhois': }
    #class { 'collectd::apache': }
    resources { "firewall":
