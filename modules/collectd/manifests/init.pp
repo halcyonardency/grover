@@ -61,7 +61,7 @@ class collectd (
   if $firewall_options_hash { validate_hash($firewall_options_hash) }
 
 
-  # Calculation of variables used in the module
+  #Calculation of variables used in the module
 
   $file_owner          = $collectd::params::file_owner
   $file_group          = $collectd::params::file_group
