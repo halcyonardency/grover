@@ -13,6 +13,10 @@ sets:
     nodes:
       "main.foo.vm":
         prefab: 'fedora-18-x64'
+  'fedora-19-x64':
+    nodes:
+      "main.foo.vm":
+        prefab: 'fedora-19-x64'
   'debian-607-x64':
     nodes:
       "main.foo.vm":
