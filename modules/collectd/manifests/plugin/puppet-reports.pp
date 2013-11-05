@@ -10,11 +10,11 @@ class collectd::plugin::puppet-reports (
 
   file { 'puppet-reports.py':
     ensure    => $collectd::plugin::apache::ensure,
-    path      => "/usr/lib/collectd/puppet_reports.py",
+    path      => "/usr/lib64/collectd/puppet_reports.py",
     mode      => '0755',
     owner     => 'root',
     group     => 'root',
-    content   => "puppet:///modules/collectd/puppet_reports.py",
+    content   => template('collectd/puppet_reports.py'),
     notify    => Service['collectd']
   }
 

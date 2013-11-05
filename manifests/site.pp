@@ -13,6 +13,7 @@ node default {
    class { 'collectd': }
    class { 'collectd::plugin::apache': }
    class { 'collectd::plugin::web': }
+   class { 'collectd::plugin::puppet-reports': }
    class { 'jwhois': }
    #class { 'collectd::apache': }
    resources { "firewall":
