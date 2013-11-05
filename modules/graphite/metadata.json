@@ -1,0 +1,40 @@
+{
+  "name": "dwerder-graphite",
+  "version": "3.0.1",
+  "source": "git clone https://github.com/echocat/puppet-graphite.git",
+  "author": "Daniel Werdermann",
+  "license": "Mozilla Public License Version 2.0",
+  "summary": "Graphite Monitoring Module",
+  "description": "This module installs and makes basic configs for graphite, with carbon and whisper",
+  "project_page": "https://github.com/echocat/puppet-graphite",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 2.2.1"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "CHANGELOG": "de8cb731b8ea48c68ddcd515252d7aec",
+    "LICENSE": "491383f60ed23a494b3414928b0feb21",
+    "Modulefile": "86e4958f47fed3811209343226c84917",
+    "README": "bb82bf49d8fb5e9511004097bf35003e",
+    "README.md": "e07f1aa3dfdf52f970a19e15e4251e46",
+    "manifests/config.pp": "fff25d5cf063dc33a47d296469a81f88",
+    "manifests/init.pp": "f99213efe0ee7a3344fd37ef2fff1c58",
+    "manifests/install/debian.pp": "aec158e66eba5d7657759cfca020ec1d",
+    "manifests/install/redhat.pp": "5f8ec1415990103a91f715a030b0b92a",
+    "manifests/install.pp": "a35ffa65844fbd865f368edb3e8ac66c",
+    "manifests/params.pp": "4038c7d2ba840622e7d874522bee254c",
+    "templates/etc/apache2/ports.conf.erb": "022825fb1efdad933d6e39cc25a943e5",
+    "templates/etc/apache2/sites-available/graphite.conf.erb": "d9d6f0dd5958ab472c67ca1d9aa88941",
+    "templates/etc/init.d/carbon-cache.erb": "90dcc40af47f8a5a9d08e8b5ff0ad1e4",
+    "templates/opt/graphite/bin/carbon-logrotate.sh.erb": "7c13f336dd820daada4d1dd2b1b8fb9c",
+    "templates/opt/graphite/conf/carbon.conf.erb": "d2fb3b3b1f610e8b30c9ed6fca740726",
+    "templates/opt/graphite/conf/graphite.wsgi.erb": "4714e01760eaec667ccab3bb747397af",
+    "templates/opt/graphite/conf/storage-schemas.conf.erb": "4bc00354a10ce3285fa3b6d87c3a1a25",
+    "templates/opt/graphite/webapp/graphite/local_settings.py.erb": "4230b9ebdc605e8cac01e6a2c5e45786"
+  }
+}
