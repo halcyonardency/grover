@@ -16,7 +16,10 @@ class sensu::repo::yum (
 
   yumrepo { 'sensu':
     enabled  => $enabled,
-    baseurl  => 'http://repos.sensuapp.org/yum/el/$releasever/$basearch/',
+    baseurl  => $operatingsystem ? {
+  	 Fedora => 'http://repos.sensuapp.org/yum/el/6/$basearch/',
+         default => 'http://repos.sensuapp.org/yum/el/$releasever/$basearch/',
+    },
     gpgcheck => 0,
     name     => 'sensu',
     descr    => 'sensu',
