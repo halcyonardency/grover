@@ -54,7 +54,7 @@ node default {
   }
 
   sensu::handler { 'default':
-    command => 'mail -s \'sensu alert\' hperf@godaddy.com',
+    command => 'mail -s \'sensu alert\' somewhere@example.com',
   }
 
 }
