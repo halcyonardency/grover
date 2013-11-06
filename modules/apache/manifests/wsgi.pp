@@ -26,6 +26,15 @@ class apache::wsgi {
     centos,redhat,scientific,fedora: {
       $osver = split($::operatingsystemrelease, '[.]')
 
+    file { '10-wsgi.conf':
+      ensure    => present,
+      path      => "${apache::config_dir}/conf.modules.d/10-wsgi.conf",
+      mode      => '0644',
+      owner     => 'root',
+      group     => 'root',
+      content   => template('apache/wsgi.conf'),
+    }
+
       package { 'mod_wsgi':
         ensure => present;
       }
