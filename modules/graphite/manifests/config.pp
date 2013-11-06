@@ -55,7 +55,7 @@ class graphite::config inherits graphite::params {
 			group   => $::graphite::params::web_user,
 			mode    => '0644',
 			content => template("graphite/opt/graphite/conf/graphite.wsgi.erb");
-		"${::graphite::params::apache_dir}/ports.conf":
+		"${::graphite::params::apacheconf_dir}/ports.conf":
 			ensure  => file,
 			owner   => $::graphite::params::web_user,
 			group   => $::graphite::params::web_user,
@@ -72,7 +72,7 @@ class graphite::config inherits graphite::params {
 			mode    => '0644',
 			content => template('graphite/etc/apache2/sites-available/graphite.conf.erb'),
 			require => [
-				File["${::graphite::params::apache_dir}/ports.conf"],
+				File["${::graphite::params::apacheconf_dir}/ports.conf"],
 			];
 	}
 
