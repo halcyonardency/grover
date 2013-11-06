@@ -3,9 +3,13 @@ grover
 
 Puppet configs.  Because we care.
 
-Tested on Fedora19 x86_64.
+Tested on Fedora19 x86_64.   
 
-Pre-install
+This is a masterless Puppet repository.  
+
+This collection allows you to quickly and simply spin up a virtual or bare metal host for development as well as  production use.
+
+Stupid Simple Install Steps
 -------------
 
 <code><pre>
