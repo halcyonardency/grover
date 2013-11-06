@@ -32,9 +32,9 @@ node default {
    }
    class { ['default_fw::pre', 'default_fw::post']: }
    class { 'firewall': }
-   firewall { "00080 open tcp ports 22, 80, 443":
+   firewall { "00080 open tcp ports 22, 80, 443, 2080":
      proto => "tcp",
-     dport => [22, 80, 443], 
+     dport => [22, 80, 443, 2080], 
      action => "accept"
    }
 

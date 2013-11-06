@@ -47,8 +47,12 @@ WSGISocketPrefix run/wsgi
 	# The graphite.wsgi file has to be accessible by apache. It won't
 	# be visible to clients because of the DocumentRoot though.
 	<Directory /opt/graphite/conf/>
+  			Require all granted
 			Order deny,allow
 			Allow from all
+	</Directory>
+	<Directory /opt/graphite/webapp/content>
+  			Require all granted
 	</Directory>
 
 
