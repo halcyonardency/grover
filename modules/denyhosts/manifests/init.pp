@@ -12,7 +12,7 @@ class denyhosts (
     content => template("denyhosts/denyhosts.conf.erb"),
     notify  => Service["denyhosts"],
   }
-
+  
   service {
     "denyhosts":
       ensure    => running,
@@ -20,7 +20,10 @@ class denyhosts (
       hasstatus => true,
       hasrestart=> true,
       require   => Package["denyhosts"],
-      provider  => "systemd"
+      provider => $operatingsystem ? {
+        Fedora  => "systemd",
+        default => "init",
+      }
   }
 
   file {
