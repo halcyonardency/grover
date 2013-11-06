@@ -41,3 +41,8 @@ Notice: Finished catalog run in 253.50 seconds
 real    4m18.036s
 user    3m17.684s
 sys     0m13.328s
+
+TODO Next
+-------------
+- Redis
+- RabbitMQ :: server, vhost, creds
