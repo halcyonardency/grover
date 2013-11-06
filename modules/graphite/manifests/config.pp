@@ -121,8 +121,12 @@ class graphite::config inherits graphite::params {
 	}
 
 	# startup carbon engine
+        if $lsbmajdistrelease == 18 {
+          $carbon_service_provider = "init"
+        }
 
 	service { 'carbon-cache':
+                provider   => $carbon_service_provider,
 		ensure     => running,
 		enable     => true,
 		hasstatus  => true,
